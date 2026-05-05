@@ -17,7 +17,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Verbatim reference to project1_df_2.csv
-    df = pd.read_csv("project1_df_2.csv")
+    df = pd.read_csv("project1_df.csv")
     df['Purchase Date'] = pd.to_datetime(df['Purchase Date'], dayfirst=True, errors='coerce')
     df = df.dropna(subset=['Purchase Date'])
     return df
